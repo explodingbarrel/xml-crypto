@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Receipt xmlns="http://schemas.microsoft.com/windows/2012/store/receipt" Version="2.0" CertificateId="A656B9B1B3AA509EEA30222E6D5E7DBDA9822DCD">
+	<ProductReceipt PurchasePrice="$0" PurchaseDate="2014-10-06T06:54:46.969Z" Id="eadb0bb5-223b-403e-9694-a0c9f01398af" AppId="16830KabamVanDev.balhbalh6dev_6mbf1xbptc3r4" ProductId="com.kabam.fast.499" ProductType="Consumable" PublisherUserId="ENGIU6Nx+NqV0hUiXwRdYX70+vIzfHiI3DXqdJna274=" PublisherDeviceId="/pHWSr65wdh4jnVFqqlVtHdaviXAXlDG/Wa8vMIB9WI=" MicrosoftProductId="2ba2906d-1573-466e-acec-4e84c3b79922" MicrosoftAppId="1e368745-0910-4366-a26d-992e3b6cdfbc" />
+	<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+		<SignedInfo>
+			<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+			<SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+			<Reference URI="">
+				<Transforms>
+					<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+				</Transforms>
+				<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+				<DigestValue>J+lOjFaVPsRphSeXOXg+qLUQ+YgmXF2SIdjq835WI2A=</DigestValue>
+			</Reference>
+		</SignedInfo>
+		<SignatureValue>olgRwHR31qyjspWSkIs0amc1+ULkDkoZ8Gg91gVdO1YB4TphgsoLDPXWxurYcyrQIZGpTwEeSsiKvPUt8mYhJ8hxFyHTvNRlvDuQBiVAcaWvVonmndPuMYhg1AI7PHjywPYztJSlk6U+/Kyfr12EuNnje3t58ONPO5UMVN8cFx2kEUhiXqlyxVXQ7EzDVWNbqvJ4aRaAmcnHxxvqSpvJDSRaCdkPt6GW9TXKIzVqZ/KHQcByA3ori0mSGdjLay1Cim6h2yTJhQKeybUyxJIkq5xCAcn7f0cLqQGSN9kEuU4WZtKW8W+UlFMTydnLDj2q3oe3wRA+KFmFa+zYSm+zlQ==</SignatureValue>
+	</Signature>
+</Receipt>
