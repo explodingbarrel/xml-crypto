@@ -33,7 +33,7 @@ module.exports = {
 		var xml = fs.readFileSync('./test/static/windows_store_signature.xml', 'utf-8');
 		var doc = new Dom({ignoreWhiteSpace: true}).parseFromString(xml);
 		//ensure xml has not white space
-		xml = doc.firstChild.toString()
+		xml = select(doc, "/*[local-name()='Receipt']").toString()
 
 		var signature = crypto.xpath(doc, "//*//*[local-name(.)='Signature' and namespace-uri(.)='http://www.w3.org/2000/09/xmldsig#']")[0];
 		var sig = new crypto.SignedXml();
@@ -42,8 +42,23 @@ module.exports = {
 		var result = sig.checkSignature(xml);
 		test.equal(result, true);
 		test.done();
-	}
+	},
 
+	"windows phone signature": function(test) {
+
+		var xml = fs.readFileSync('./test/static/windows_phone_signature.xml', 'utf-8');
+		var doc = new Dom({ignoreWhiteSpace: true}).parseFromString(xml);
+		//ensure xml has not white space
+		xml = select(doc, "/*[local-name()='Receipt']").toString()
+
+		var signature = crypto.xpath(doc, "//*//*[local-name(.)='Signature' and namespace-uri(.)='http://www.w3.org/2000/09/xmldsig#']")[0];
+		var sig = new crypto.SignedXml();
+		sig.keyInfoProvider = new crypto.FileKeyInfo("./test/static/windows_phone_certificate.pem");
+		sig.loadSignature(signature.toString());
+		var result = sig.checkSignature(xml);
+		test.equal(result, true);
+		test.done();
+	}
 }
 
 function verifySignature(test, xml, xpath) {
