@@ -257,7 +257,7 @@ module.exports = {
       var ref = sig.references[i]    
       var expectedUri = "#_"+i
       test.equal(expectedUri, ref.uri, "wrong uri for index " + i + ". expected: " + expectedUri + " actual: " + ref.uri)
-      test.equal(1, ref.transforms.length)
+      test.equal(2, ref.transforms.length)
       test.equal("http://www.w3.org/2001/10/xml-exc-c14n#", ref.transforms[0])
       test.equal(digests[i], ref.digestValue)
       test.equal("http://www.w3.org/2000/09/xmldsig#sha1", ref.digestAlgorithm)      
